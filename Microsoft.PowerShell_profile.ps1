@@ -142,11 +142,11 @@ function hb {
         return
     }
     
-    $uri = "http://bin.christitus.com/documents"
+    $uri = "http://bin.cyberdeanda.ddns.net/document"
     try {
         $response = Invoke-RestMethod -Uri $uri -Method Post -Body $Content -ErrorAction Stop
         $hasteKey = $response.key
-        $url = "http://bin.christitus.com/$hasteKey"
+        $url = "http://bin.cyberdeanda.ddns.net/$hasteKey"
         Write-Output $url
     } catch {
         Write-Error "Failed to upload the document. Error: $_"
