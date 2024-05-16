@@ -142,7 +142,7 @@ function hb {
         return
     }
     
-    $uri = "http://bin.cyberdeanda.ddns.net/"
+    $uri = "http://bin.cyberdeanda.ddns.net"
     try {
         $response = Invoke-RestMethod -Uri $uri -Method Post -Body $Content -ErrorAction Stop
         $hasteKey = $response.key
